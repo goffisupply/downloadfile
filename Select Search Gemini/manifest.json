@@ -1,0 +1,15 @@
+// manifest.json
+{
+  "manifest_version": 3,
+  "name": "Gemini Voice Assistant",
+  "version": "1.0",
+  "description": "Sends selected text to Gemini API and speaks the response",
+  "permissions": ["activeTab", "storage", "contextMenus", "scripting"],
+  "host_permissions": ["https://*.googleapis.com/"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

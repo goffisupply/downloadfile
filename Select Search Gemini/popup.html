@@ -1,0 +1,76 @@
+<!-- popup.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gemini Voice Assistant</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    h2 {
+      margin-top: 0;
+      color: #4285F4;
+    }
+    input, button {
+      padding: 8px;
+      border-radius: 4px;
+    }
+    input {
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #4285F4;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #3367D6;
+    }
+    .status {
+      margin-top: 10px;
+      padding: 8px;
+      border-radius: 4px;
+    }
+    .success {
+      background-color: #e6f4ea;
+      color: #137333;
+    }
+    .error {
+      background-color: #fce8e6;
+      color: #c5221f;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Gemini Voice Assistant</h2>
+    <label for="apiKey">Gemini API Key:</label>
+    <input type="password" id="apiKey" placeholder="Enter your Gemini API key">
+    
+    <label for="speakRate">Speech Rate (50-200):</label>
+    <input type="number" id="speakRate" min="50" max="200" value="150">
+    
+    <button id="saveSettings">Save Settings</button>
+    
+    <div class="instructions">
+      <p>How to use:</p>
+      <ol>
+        <li>Select text on any webpage</li>
+        <li>Right-click and select "Ask Gemini"</li>
+        <li>Listen to the spoken response</li>
+      </ol>
+    </div>
+    
+    <div id="status"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
